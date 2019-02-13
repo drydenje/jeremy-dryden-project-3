@@ -12,8 +12,8 @@
    <script src='./scripts/script.js'></script>
 </head>
 <body>
-   <main class="card">
    <!-- Code recipe card -->
+   <main class="card">
       <!-- Top Part of card -->
       <section class="snippet">
          <form action="#">
@@ -21,7 +21,11 @@
             <input type="text" id="snippet-title" class="snippet-title" placeholder="Snippet Title">
 
             <label for="snippet-code" class="visually-hidden">Snippet Code:</label>
-            <input type="text" id="snippet-code" class="snippet-code" placeholder="Enter your code here">
+            <textarea name="snippet-code" id="snippet-code" class="snippet-code"
+            cols="30" rows="10" placeholder="Enter your code here"></textarea>
+            <button>New</button>
+            <button>Delete</button>
+            <button>Save</button>
          </form>
       </section>
 
@@ -29,12 +33,23 @@
       <nav>
          <ul>
             <li>
-               <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
+               <button>
+                  <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
+               </button>
+               
             </li>
-            <li><i class="fas fa-chevron-left"></i></li>
-            <li><i class="fas fa-chevron-right"></i></li>
             <li>
-               <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>
+               <button>
+                  <i class="fas fa-chevron-left"></i></li>
+               </button>
+            <li>
+               <button>
+                  <i class="fas fa-chevron-right"></i></li>
+               </button>
+            <li>
+               <button>
+                  <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>
+               </button>
             </li>
          </ul>
       </nav>
