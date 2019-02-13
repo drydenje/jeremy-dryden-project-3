@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,EAAG;EACA,OAAO,EAAE,CAAC;EACV,eAAe,EAAE,IAAI",
-"sources": ["nav.scss"],
-"names": [],
-"file": "nav.css"
-}
