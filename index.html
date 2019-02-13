@@ -12,11 +12,17 @@
    <script src='./scripts/script.js'></script>
 </head>
 <body>
-   <main>
+   <main class="card">
    <!-- Code recipe card -->
       <!-- Top Part of card -->
       <section class="snippet">
-         
+         <form action="#">
+            <label for="snippet-title" class="visually-hidden">Snippet Title:</label>
+            <input type="text" id="snippet-title" class="snippet-title" placeholder="Snippet Title">
+
+            <label for="snippet-code" class="visually-hidden">Snippet Code:</label>
+            <input type="text" id="snippet-code" class="snippet-code" placeholder="Enter your code here">
+         </form>
       </section>
 
       <!-- Lower arrow navigation -->
