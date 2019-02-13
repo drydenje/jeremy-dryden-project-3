@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,EAAG;EACA,OAAO,EAAE,CAAC;EACV,eAAe,EAAE,IAAI",
+"sources": ["partials/nav.scss"],
+"names": [],
+"file": "styles.css"
+}
