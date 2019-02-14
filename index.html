@@ -21,34 +21,37 @@
             <label for="snippet-code" class="visually-hidden">Snippet Code:</label>
             <textarea name="snippet-code" id="snippet-code" class="snippet-code"
             cols="30" rows="10" placeholder="Enter your code here"></textarea>
-            <button id="newSnippet">New</button>
-            <button id="deleteSnippet">Delete</button>
-            <button id="saveSnippet">Save</button>
          </form>
       </section>
 
       <!-- Lower arrow navigation -->
       <nav>
-         <ul>
+         <ul class="chevron-buttons">
             <li>
-               <button id="buttonFirst">
+               <button id="button-first">
                   <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
                </button>
                
             </li>
             <li>
-               <button id="buttonPrevious">
+               <button id="button-previous">
                   <i class="fas fa-chevron-left"></i></li>
                </button>
             <li>
-               <button id="buttonNext">
+               <button id="button-next">
                   <i class="fas fa-chevron-right"></i></li>
                </button>
             <li>
-               <button id="buttonLast">
+               <button id="button-last">
                   <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i>
                </button>
             </li>
+         </ul>
+
+         <ul class="crud-buttons">
+            <li><button id="new-snippet">New</button></li>
+            <li><button id="delete-snippet">Delete</button></li>
+            <li><button id="save-snippet">Save</button></li>
          </ul>
       </nav>
    </main>

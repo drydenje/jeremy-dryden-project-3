@@ -3,13 +3,10 @@ const myapp = {};
 // Title, Code, ID
 myapp.snippets = [];
 
-
 myapp.saveSnippet = function(snippet) {
    this.snippets.push(snippet);
    console.log(myapp.snippets);
 };
-
-
 
 $(function() {
    $('form').on('submit', function(e) {
@@ -18,34 +15,34 @@ $(function() {
    });
    
    // CRUD Buttons Start
-   $('#newSnippet').on('click', function() {
+   $('#new-snippet').on('click', function() {
       console.log("new");
    });
    
-   $('#deleteSnippet').on('click', function() {
+   $('#delete-snippet').on('click', function() {
       console.log("delete");
    });
    
-   $('#saveSnippet').on('click', function() {
-      console.log("save");
+   $('#save-snippet').on('click', function() {
+
    });
    // CRUD Buttons End
    
 
    // Navigation Buttons Start
-   $('#buttonFirst').on('click', function() {
+   $('#button-first').on('click', function() {
       console.log("first");
    });
    
-   $('#buttonPrevious').on('click', function() {
+   $('#button-previous').on('click', function() {
       console.log("previous");
    });
    
-   $('#buttonNext').on('click', function() {
+   $('#button-next').on('click', function() {
       console.log("next");
    });
    
-   $('#buttonLast').on('click', function() {
+   $('#button-last').on('click', function() {
       console.log("last");
    });
    // Navigation Button End
