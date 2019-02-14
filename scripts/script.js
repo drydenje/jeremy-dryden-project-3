@@ -1,14 +1,28 @@
 const myapp = {};
 
-// Title, Code, ID
+// Title, Code
 myapp.snippets = [];
+
 
 myapp.saveSnippet = function(snippet) {
    this.snippets.push(snippet);
-   console.log(myapp.snippets);
+   // console.log(myapp.snippets);
 };
 
+myapp.removeSnippet = function(id) {
+   this.snippets.splice(Number.parseInt(id), 1);
+   // console.log(myapp.snippets);
+}
+
 $(function() {
+   let $snippetTitle    = $('#snippet-title');
+   let $snippetCode     = $('#snippet-code');
+
+   // let $chevronFirst    = $('button-first');
+   // let $chevronPrevious = $('button-previous');
+   // let $chevronNext     = $('button-next');
+   // let $chevronLast     = $('button-last');
+
    $('form').on('submit', function(e) {
       // Prevent the form from submitting
       e.preventDefault();
@@ -16,15 +30,20 @@ $(function() {
    
    // CRUD Buttons Start
    $('#new-snippet').on('click', function() {
-      console.log("new");
+      $snippetTitle.val('');
+      $snippetCode.val('');
    });
    
    $('#delete-snippet').on('click', function() {
-      console.log("delete");
+      myapp.removeSnippet(1);
    });
    
    $('#save-snippet').on('click', function() {
-
+      const snippetObject = {
+         title: $snippetTitle.val(),
+         code: $snippetCode.val()
+      }
+      myapp.saveSnippet(snippetObject);
    });
    // CRUD Buttons End
    
