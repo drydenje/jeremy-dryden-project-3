@@ -1,13 +1,19 @@
-main {
+main.card {
    border: 1px solid grey;
-   width: 800px;
-   height: 400px;
+   // width: 800px;
+   width: 80vw;
+   max-width: 950px;
    padding: 20px;
 
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: stretch;
+
+
+   h2 {
+      margin:  10px auto;
+   }
 
 }
 .paper {

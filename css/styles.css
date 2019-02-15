@@ -147,12 +147,23 @@ body {
   align-items: center;
   background-image: url("../assets/wallpaper_1023.jpg"); }
 
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.1rem; }
+
+form > * {
+  max-width: 100%; }
+
 input {
   display: block;
   width: 100%; }
 
 textarea {
-  width: 100%; }
+  max-width: 100%;
+  resize: none; }
 
 .skip-link {
   position: absolute;
@@ -177,15 +188,17 @@ label.visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
-main {
+main.card {
   border: 1px solid grey;
-  width: 800px;
-  height: 400px;
+  width: 80vw;
+  max-width: 950px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch; }
+  main.card h2 {
+    margin: 10px auto; }
 
 .paper {
   background: #fff;

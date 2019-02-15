@@ -2,7 +2,7 @@
 $black: #2c2c2c;
 $white: #ffffff;
 
-// $fontSerif: 'Playfair Display SC', serif;
+$fontSerif: 'Merriweather', serif;
 $fontSansSerif: 'Inconsolata', monospace;
 
 $fontWeightLight: 300;
@@ -32,7 +32,19 @@ body {
 
    // background: black;
    background-image: url("../assets/wallpaper_1023.jpg");
-}  
+}
+
+h2 {
+   font-family: $fontSerif;
+   font-weight: $fontWeightRegular;
+   font-size: 1rem;
+   line-height: 1.6;
+   letter-spacing: 0.1rem;
+}
+
+form > * {
+   max-width: 100%;
+}
 
 input {
    display: block;
@@ -40,7 +52,8 @@ input {
 }
 
 textarea {
-   width: 100%;
+   max-width: 100%;
+   resize: none;
 }
 
 
