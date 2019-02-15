@@ -116,12 +116,10 @@ myapp.defaultData = [
 
 myapp.saveSnippet = function(snippet) {
    this.snippets.push(snippet);
-   // console.log(myapp.snippets);
 };
 
 myapp.removeSnippet = function(id) {
    this.snippets.splice(Number.parseInt(id), 1);
-   // console.log(myapp.snippets);
 }
 
 myapp.loadSnippet = function(id) {
@@ -207,7 +205,7 @@ $(function() {
    
    // todo: not quite working yet
    $('#delete-snippet').on('click', function() {
-      myapp.removeSnippet(1);
+      myapp.removeSnippet(myapp.current);
    });
    
    $('#save-snippet').on('click', function() {
