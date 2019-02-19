@@ -178,11 +178,6 @@ $(function() {
    let $snippetTitle    = $('#snippet-title');
    let $snippetCode     = $('#snippet-code');
 
-   // let $chevronFirst    = $('button-first');
-   // let $chevronPrevious = $('button-previous');
-   // let $chevronNext     = $('button-next');
-   // let $chevronLast     = $('button-last');
-
    // load defaults
    myapp.loadSnippetArray();
    
