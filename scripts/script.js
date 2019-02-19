@@ -197,27 +197,7 @@ $(function() {
    });
 
    
-   // CRUD Buttons Start
-   $('#new-snippet').on('click', function() {
-      $snippetTitle.val('');
-      $snippetCode.val('');
-   });
-   
-   // todo: not quite working yet
-   $('#delete-snippet').on('click', function() {
-      myapp.removeSnippet(myapp.current);
-   });
-   
-   $('#save-snippet').on('click', function() {
-      const snippetObject = {
-         title: $snippetTitle.val(),
-         code: $snippetCode.val()
-      }
-      myapp.saveSnippet(snippetObject);
-   });
-   // CRUD Buttons End
-   
-
+ 
 
    // Navigation Buttons Start
    $('#button-first').on('click', function() {
@@ -239,5 +219,31 @@ $(function() {
       myapp.moveToSnippet("last");
       loadCard();
    });
+
+   $('#can-i-use').on('click', function() {
+      // alert($('#snippet-code').selection());
+      window.open(`https://caniuse.com/#search=${$('#snippet-code').selection()}`);
+   });
    // Navigation Button End
+
+
+   // CRUD Buttons Start
+   $('#new-snippet').on('click', function () {
+      $snippetTitle.val('');
+      $snippetCode.val('');
+   });
+
+   // todo: not quite working yet
+   $('#delete-snippet').on('click', function () {
+      myapp.removeSnippet(myapp.current);
+   });
+
+   $('#save-snippet').on('click', function () {
+      const snippetObject = {
+         title: $snippetTitle.val(),
+         code: $snippetCode.val()
+      }
+      myapp.saveSnippet(snippetObject);
+   });
+   // CRUD Buttons End
 });
