@@ -16,6 +16,11 @@ main.card {
    }
 
 }
+
+// pulled from css tricks
+// uses before and after to create elements, change the
+// z-index to below the actual content, then rotates them
+// slightly to create a 'stack of papers' effect
 .paper {
    background: #fff;
    padding: 30px;

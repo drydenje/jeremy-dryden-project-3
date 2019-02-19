@@ -120,6 +120,7 @@ myapp.saveSnippet = function(snippet) {
 
 myapp.removeSnippet = function(id) {
    this.snippets.splice(Number.parseInt(id), 1);
+   this.current = 0;
 }
 
 myapp.loadSnippet = function(id) {
@@ -160,7 +161,11 @@ myapp.moveToSnippet = function(command) {
          myapp.loadSnippet();
          break;
       case "last":
-         myapp.current = myapp.snippets.length - 1;
+         if(myapp.snippets.length) {
+            myapp.current = myapp.snippets.length - 1;
+         } else {
+            myapp.current = 0;
+         }
          myapp.loadSnippet();
          break;
       default:
@@ -221,8 +226,12 @@ $(function() {
    });
 
    $('#can-i-use').on('click', function() {
-      // alert($('#snippet-code').selection());
-      window.open(`https://caniuse.com/#search=${$('#snippet-code').selection()}`);
+      const selection = $('#snippet-code').selection();
+      if(selection) {
+         window.open(`https://caniuse.com/#search=${selection}`);
+      } else {
+         alert("Please select (highlight) a term to search for");
+      }
    });
    // Navigation Button End
 
@@ -236,6 +245,14 @@ $(function() {
    // todo: not quite working yet
    $('#delete-snippet').on('click', function () {
       myapp.removeSnippet(myapp.current);
+      console.log(myapp.current);
+      console.log(myapp.snippets.length)
+      if(myapp.snippets.length) {
+         loadCard();
+      } else {
+         $snippetTitle.val('');
+         $snippetCode.val('');
+      }
    });
 
    $('#save-snippet').on('click', function () {

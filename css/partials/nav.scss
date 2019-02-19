@@ -13,3 +13,13 @@ nav {
       }
    }
 }
+
+@media(max-width: 770px) {
+   nav {
+      flex-direction: column;
+
+      ul {
+         margin: 0 auto;
+      }
+   }
+}
